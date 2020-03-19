@@ -2,11 +2,11 @@ Who is the real first blood king?
 =================================
 
 
-![First blood king](img/F1rst_Blood_K1ng.png)
+![First blood king](img/kec4.png)
 
-**STILL THE FIRST BLOOD KING!!!**
+**Not first blood king anymore :-(**
 
-F1rst Blood K1ng has 231 first bloods in 1417 games. Assuming a binomial distribution with parameters ``p = 0.1`` and ``n = 1417`` as null hypothesis, the corresponding p value is ``p = 1.521627e-13``.
+kec4 has 118 first bloods in 1063 games. Assuming a binomial distribution with parameters ``p = 0.1`` and ``n = 1063`` as null hypothesis, the corresponding p value is ``p = 1.268688e-01``.
 
-Last updated: 2020-03-19 15:11:46 UTC
+Last updated: 2020-03-19 17:29:04 UTC
 
