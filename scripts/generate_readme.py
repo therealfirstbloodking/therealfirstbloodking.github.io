@@ -44,8 +44,8 @@ def generate_readme(p_value, n_matches, n_first_bloods, summoner,
         readme_info += '**Not first blood king anymore :-(**\n\n'
     readme_info += (f'{summoner[0]} has {n_first_bloods:d} first bloods in '
                     f'{n_matches:d} games. Assuming a binomial distribution '
-                    f'with parameters ``p = 0.1`` and ``n = {n_matches:d} as '
-                    f'null hypothesis, the corresponding p value is '
+                    f'with parameters ``p = 0.1`` and ``n = {n_matches:d}`` '
+                    f'as null hypothesis, the corresponding p value is '
                     f'``p = {p_value:e}``.\n\n')
     now = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
     readme_info += f'Last updated: {now}\n\n'
