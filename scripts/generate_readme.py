@@ -17,7 +17,8 @@ ALPHA = 0.05
 PROB_BINOM = 0.1
 
 
-def generate_readme(p_value, summoner, readme_path='../README.md',
+def generate_readme(p_value, n_matches, n_first_bloods, summoner,
+                    readme_path='../README.md',
                     readme_header='readme_header.md'):
     """Generate README."""
     with open(readme_header, 'r') as infile:
@@ -34,17 +35,19 @@ def generate_readme(p_value, summoner, readme_path='../README.md',
     plt.savefig(plot_path_local, dpi=150, bbox_inches='tight')
     print(f"Saved {plot_path_local}")
     plot_path = os.path.join(plot_dir, filename)
-    readme_info += f'![First blood king]({plot_path})'
+    readme_info += f'![First blood king]({plot_path})\n\n'
 
     # Text
     if p_value < ALPHA:
-        readme_info += ('STILL THE FIRST BLOOD KING!!!\n'
-                        '=============================\n\n\n')
+        readme_info += '**STILL THE FIRST BLOOD KING!!!**\n\n'
     else:
-        readme_info += ('Not first blood king anymore :-(\n'
-                        '================================\n\n\n')
+        readme_info += '**Not first blood king anymore :-(**\n\n'
+    readme_info += (f'{summoner[0]} has {n_first_bloods:d} out of '
+                    f'{n_matches:d} games. Assuming a binomial distribution '
+                    f'with ``p = 0.1`` as null hypothesis, the corresponding '
+                    f'p value is {p_value:e}.\n\n')
     now = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
-    readme_info += f'Last updated: {now}\n'
+    readme_info += f'Last updated: {now}\n\n'
 
     # Write README
     with open(readme_path, 'w') as outfile:
@@ -129,7 +132,7 @@ def main():
     plt.legend()
 
     # Update README
-    generate_readme(p_value, summoner)
+    generate_readme(p_value, n_matches, n_first_bloods, summoner)
 
 
 if __name__ == '__main__':
