@@ -48,7 +48,7 @@ def generate_readme(p_value, n_matches, n_first_bloods, summoner,
                     f'as null hypothesis, the corresponding p value is '
                     f'``p = {p_value:e}``.\n\n')
     now = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
-    readme_info += f'Last updated: {now}\n\n'
+    readme_info += f'Last updated: {now} UTC\n\n'
 
     # Write README
     with open(readme_path, 'w') as outfile:
