@@ -15,7 +15,6 @@ from __init__ import get_config, get_outfile, get_summoner_info
 
 ALPHA = 0.05
 PROB_BINOM = 0.1
-PLOT_DIR = os.path.join('..', 'img')
 
 
 def generate_readme(p_value, summoner, readme_path='../README.md',
@@ -25,13 +24,16 @@ def generate_readme(p_value, summoner, readme_path='../README.md',
         readme_info = infile.read()
 
     # Save plot
-    if not os.path.isdir(PLOT_DIR):
-        os.makedirs(PLOT_DIR)
-        print(f"Created '{PLOT_DIR}'")
+    plot_dir = 'img'
+    plot_dir_local = os.path.join('..', plot_dir)
+    if not os.path.isdir(plot_dir_local):
+        os.makedirs(plot_dir_local)
+        print(f"Created '{plot_dir_local}'")
     filename = summoner[0].replace(' ', '_') + '.png'
-    plot_path = os.path.join(PLOT_DIR, filename)
-    plt.savefig(plot_path, dpi=300, bbox_inches='tight')
-    print(f"Saved {plot_path}")
+    plot_path_local = os.path.join(plot_dir_local, filename)
+    plt.savefig(plot_path_local, dpi=150, bbox_inches='tight')
+    print(f"Saved {plot_path_local}")
+    plot_path = os.path.join(plot_dir, filename)
     readme_info += f'![First blood king]({plot_path})'
 
     # Text
