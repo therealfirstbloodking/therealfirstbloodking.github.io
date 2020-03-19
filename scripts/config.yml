@@ -1,5 +1,5 @@
 # User configuration file
-summoner: ['kec4']
+summoner: ['King Belau', 'GGrievous']
 region: euw1
 queues: [450]  # ARAM
 out_dir: ~/tmp/riot_api_data
