@@ -32,8 +32,7 @@ def generate_readme(p_value, summoner, readme_path='../README.md',
     plot_path = os.path.join(PLOT_DIR, filename)
     plt.savefig(plot_path, dpi=300, bbox_inches='tight')
     print(f"Saved {plot_path}")
-    readme_info += (f'.. figure:: {plot_path}\n   :align: center\n   :width: '
-                    f'80%\n\n\n')
+    readme_info += f'![First blood king]({plot_path})'
 
     # Text
     if p_value < ALPHA:
@@ -42,7 +41,7 @@ def generate_readme(p_value, summoner, readme_path='../README.md',
     else:
         readme_info += ('Not first blood king anymore :-(\n'
                         '================================\n\n\n')
-    now = datetime.datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+    now = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
     readme_info += f'Last updated: {now}\n'
 
     # Write README
