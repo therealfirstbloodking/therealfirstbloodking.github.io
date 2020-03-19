@@ -1,0 +1,14 @@
+---
+
+name: fbk
+channels:
+  - conda-forge
+
+dependencies:
+  - matplotlib
+  - numpy
+  - pip
+  - pip:
+    - riotwatcher
+  - seaborn
+  - pyyaml

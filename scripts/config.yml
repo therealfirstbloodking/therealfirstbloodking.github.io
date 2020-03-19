@@ -1,0 +1,5 @@
+# User configuration file
+summoner: ['F1rst Blood K1ng', 'Rasher007']
+region: euw1
+queues: [450]  # ARAM
+out_dir: ~/tmp/riot_api_data
