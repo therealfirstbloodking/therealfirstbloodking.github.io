@@ -1,5 +1,16 @@
 # User configuration file
-summoner: ['King Belau', 'GGrievous']
+summoners: [
+  'Captain KrümeI',
+  'Demon4rK',
+  'dergeraetx',
+  'kec4',
+  'Tobbelwutz',
+  'Yolomichel',
+  ['F1rst Blood K1ng', 'Rasher007'],
+  ['King Belau', 'GGrievous'],
+  ['Project Pigeon', 'CyberMaffia'],
+]
 region: euw1
 queues: [450]  # ARAM
-out_dir: ~/tmp/riot_api_data
+data_dir: ~/tmp/riot_api_data
+plot_dir: img  # Relative to repository base directory
