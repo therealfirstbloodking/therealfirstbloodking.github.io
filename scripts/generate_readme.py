@@ -38,12 +38,13 @@ def main():
         else:
             readme += '**not first blood king :-(**\n\n'
         readme += (f"{summoner} has {summoner_data['n_first_bloods']:d} "
-                   f"first bloods in {summoner_data['n_matches']:d} games. "
+                   f"first bloods in {summoner_data['n_matches']:d} games (= "
+                   f"{summoner_data['first_blood_ratio'] * 100:.1f}%). "
                    f"Assuming a binomial distribution with parameters ``p = "
                    f"{metadata['p_binom']:.2f}`` and ``n = "
                    f"{summoner_data['n_matches']:d}`` as null hypothesis, "
                    f"the corresponding p value is ``p = "
-                   f"{summoner_data['p_value']:e}``.\n\n\n")
+                   f"{summoner_data['p_value']:.6f}``.\n\n\n")
 
     # Finalize
     now = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")

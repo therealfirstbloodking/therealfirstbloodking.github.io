@@ -44,7 +44,7 @@ def plot_distribution(summoner, n_first_bloods, n_matches, p_value, config):
     plt.fill_between(x, 0.0, y, where=x <= n_first_bloods, alpha=0.5)
     plt.xlabel('Number of first bloods')
     plt.ylabel('Probability')
-    plt.xlim(0.0, 3.0 * PROB_BINOM * n_matches)
+    plt.xlim(0.0, 4.0 * PROB_BINOM * n_matches)
     plt.title("Distribution of first blood kills")
     plt.legend(loc='upper right')
 
